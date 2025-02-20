@@ -1,11 +1,12 @@
 pipeline {
-    agent any  // Runs on any available agent
+    agent any
 
     stages {
         stage('Generate Documentation') {
             steps {
                 script {
-                    gradleTasks('generateDocs')  // Runs the Gradle task directly
+                    //sh './gradlew generateDocs'  // For Linux/macOS
+                    bat 'gradlew.bat generateDocs'  // For Windows
                 }
             }
         }
