@@ -1,0 +1,3 @@
+task generateDocs(){
+    println 'hello'
+}
